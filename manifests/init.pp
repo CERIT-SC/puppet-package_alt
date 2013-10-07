@@ -47,10 +47,10 @@ define package_alt (
   }
 
   if $_pkg_name {
-    package { $_pkg_name:
-      ensure => $ensure,
-      alias  => $alias,
-    }
+    ensure_packages('package', $_pkg_name, {
+      'ensure' => $ensure,
+      'alias'  => $alias,
+    })
   } elsif $fail_missing {
     fail("Missing alternative package for '${name}'")
   }
