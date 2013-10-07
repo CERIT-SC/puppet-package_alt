@@ -5,7 +5,8 @@ define package_alt (
   $alias        = $title,
   $platform     = ''
 ) {
-  validate_bool($complain)
+  validate_bool($fail_missing)
+  validate_string($alias)
   validate_string($platform)
 
   if is_hash($alternatives) {
