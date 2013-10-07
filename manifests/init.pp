@@ -47,7 +47,7 @@ define package_alt (
   }
 
   if $_pkg_name {
-    ensure_packages('package', $_pkg_name, {
+    ensure_resource('package', $_pkg_name, {
       'ensure' => $ensure,
       'alias'  => $alias,
     })
