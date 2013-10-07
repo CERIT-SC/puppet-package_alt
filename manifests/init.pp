@@ -3,7 +3,7 @@ define package_alt (
   $fail_missing = true,
   $alternatives = $title,
   $alias        = $title,
-  $platform = ''
+  $platform     = ''
 ) {
   validate_bool($complain)
   validate_string($platform)
