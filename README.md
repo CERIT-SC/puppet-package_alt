@@ -62,12 +62,18 @@ $software = {
 Lower cased:
 
 0. Custom `$platform` parameter
-1. `${::operatingsystem}${::operatingsystemrelease}` (*centos6.4*)
-2. `${::operatingsystem}${::operatingsystemmajrelease}` (*centos6*)
-3. `${::operatingsystem}` (*centos*)
-4. `${::osfamily}${::operatingsystemrelease}` (*redhat6.4*)
-5. `${::osfamily}${::operatingsystemmajrelease}` (*redhat6*)
-6. `${::osfamily}` (*redhat*)
+1. `${::operatingsystem}-${::operatingsystemrelease}-${::architecture}` (*centos-6.4-x86_64*)
+2. `${::operatingsystem}-${::operatingsystemrelease}` (*centos-6.4*)
+3. `${::operatingsystem}-${::operatingsystemmajrelease}-${::architecture}` (*centos-6-x86_64*)
+4. `${::operatingsystem}-${::operatingsystemmajrelease}` (*centos-6*)
+5. `${::operatingsystem}-${::architecture}` (*centos-x86_64*)
+6. `${::operatingsystem}` (*centos*)
+7. `${::osfamily}-${::operatingsystemrelease}-${::architecture}` (*redhat-6.4-x86_64*)
+8. `${::osfamily}-${::operatingsystemrelease}` (*redhat-6.4*)
+9. `${::osfamily}-${::operatingsystemmajrelease}-${::architecture}` (*redhat-6-x86_64*)
+10. `${::osfamily}-${::operatingsystemmajrelease}` (*redhat-6*)
+11. `${::osfamily}-${::architecture}` (*redhat-x86_64*)
+12. `${::osfamily}` (*redhat*)
 
 ### Software alternatives structure
 
