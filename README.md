@@ -112,13 +112,13 @@ $software = {
 
 ```puppet
 $software = {
-  'rsync'  => 'rsync',         # same name on all platforms
+  'rsync'  => 'rsync',          # same name on all platforms
   'ash'    => {
-    'debian'  => 'ash'         # just Debian supported
+    'debian'   => 'ash'         # just Debian supported
   },
   'tshark' => {
-    'debian6' => 'tshark',     # just Debian 6 and any
-    'redhat'  => 'wireshark',  # RedHat family supported
+    'debian-6' => 'tshark',     # just Debian 6 and any
+    'redhat'   => 'wireshark',  # RedHat family supported
   },
 }
 
