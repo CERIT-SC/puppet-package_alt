@@ -1,4 +1,4 @@
-define package_alt (
+define package_alternatives (
   $ensure,
   $fail_missing = true,
   $alternatives = $title,

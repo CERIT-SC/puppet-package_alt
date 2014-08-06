@@ -1,6 +1,6 @@
-# Puppet package\_alt module
+# Puppet package\_alternatives module
 
-This module provides a defined resource `package_alt` for easy
+This module provides a defined resource `package_alternatives` for easy
 installation of software packages with different (alternative)
 names across platforms.
 
@@ -20,7 +20,7 @@ Required modules:
 Full configuration options:
 
 ```
-package_alt { 'resource title':
+package_alternatives { 'resource title':
   ensure       => ...,         # Resource package ensure state
   fail_missing => boolean,     # Fail on no alternative package.
   alternatives => string|hash, # Structure with package alternatives.
@@ -122,7 +122,7 @@ $software = {
   },
 }
 
-package_alt { keys($software):
+package_alternatives { keys($software):
   ensure       => present,
   alternatives => $software,
   fail_missing => false,       # skip packages with no alternative on platform
