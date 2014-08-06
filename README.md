@@ -1,6 +1,6 @@
 # Puppet package\_alternatives module
 
-This module provides a defined resource `package_alternatives` for easy
+This module provides a defined type `package_alternatives` for easy
 installation of software packages with different (alternative)
 names across platforms.
 
