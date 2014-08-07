@@ -7,6 +7,7 @@
   "source": "https://github.com/CERIT-SC/puppet-package_alternatives.git",
   "project_page": null,
   "issues_url": "https://github.com/CERIT-SC/puppet-package_alternatives/issues",
+  "tags": ["package"],
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",
