@@ -5,14 +5,15 @@
   "summary": "Package wrapper for easy work with different package names across platforms",
   "license": "MIT",
   "source": "https://github.com/CERIT-SC/puppet-package_alternatives.git",
-  "project_page": null,
+  "project_page": "https://github.com/CERIT-SC/puppet-package_alternatives",
   "issues_url": "https://github.com/CERIT-SC/puppet-package_alternatives/issues",
-  "tags": ["package"],
+  "tags": [
+    "package"
+  ],
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",
-      "version_range": ">= 1.0.0"
+      "version_range": ">= 4.0.0"
     }
   ]
 }
-
