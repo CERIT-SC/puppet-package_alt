@@ -74,7 +74,7 @@ define package_alternatives (
     fail('$alternatives must be hash or string')
   }
 
-  if $_pkg_name {
+  if $_pkg_name and ! defined(Package[$_pkg_name]) {
     ensure_resource('package', $_pkg_name, {
       'ensure' => $ensure,
       'alias'  => $alias,
