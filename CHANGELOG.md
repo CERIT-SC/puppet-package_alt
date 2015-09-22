@@ -1,3 +1,11 @@
+## 2015-09-22 - Release 0.9.3
+
+Check for already defined package.
+
+#### Bugfixes
+
+- Before defining new package check for existing definition.
+
 ## 2014-12-08 - Release 0.9.2
 
 Fix file/directory permissions.
