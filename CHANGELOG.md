@@ -1,3 +1,7 @@
+## 2017-06-12 - Release 0.9.4
+
+Check for already defined package alias.
+
 ## 2015-09-22 - Release 0.9.3
 
 Check for already defined package.

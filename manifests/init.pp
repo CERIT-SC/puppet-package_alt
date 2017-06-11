@@ -2,11 +2,11 @@ define package_alternatives (
   $ensure,
   $fail_missing = true,
   $alternatives = $title,
-  $alias        = $title,
+  $pkg_alias    = $title,
   $platform     = ''
 ) {
   validate_bool($fail_missing)
-  validate_string($alias)
+  validate_string($pkg_alias)
   validate_string($platform)
 
   if is_hash($alternatives) {
@@ -74,10 +74,10 @@ define package_alternatives (
     fail('$alternatives must be hash or string')
   }
 
-  if $_pkg_name and ! defined(Package[$_pkg_name]) {
+  if $_pkg_name and ! defined(Package[$_pkg_name]) and ! defined(Package[$pkg_alias]) {
     ensure_resource('package', $_pkg_name, {
       'ensure' => $ensure,
-      'alias'  => $alias,
+      'alias'  => $pkg_alias,
     })
   } elsif $fail_missing {
     fail("Missing alternative package for '${name}'")
