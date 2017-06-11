@@ -1,12 +1,19 @@
 {
   "name": "ceritsc-package_alternatives",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "author": "ceritsc",
   "summary": "Package wrapper for easy work with different package names across platforms",
   "license": "MIT",
   "source": "https://github.com/CERIT-SC/puppet-package_alternatives.git",
   "project_page": "https://github.com/CERIT-SC/puppet-package_alternatives",
   "issues_url": "https://github.com/CERIT-SC/puppet-package_alternatives/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 4.0.0"
+    }
+  ],
+  "data_provider": null,
   "tags": [
     "package"
   ],
@@ -48,8 +55,5 @@
       "name": "puppet",
       "version_requirement": "3.0"
     }
-  ],
-  "dependencies": [
-    {"name":"puppetlabs/stdlib","version_requirement":">= 4.0.0"}
   ]
 }
