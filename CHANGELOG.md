@@ -1,3 +1,7 @@
+## 2017-06-13 - Release 0.9.5
+
+Fix warnings about Puppet Unknown variable: '_pkg_name'
+
 ## 2017-06-12 - Release 0.9.4
 
 Check for already defined package alias.

@@ -65,6 +65,9 @@ define package_alternatives (
       $_pkg_name = $_alts[downcase("${of}-${a}")]
     } elsif has_key($_alts, downcase($of)) {
       $_pkg_name = $_alts[downcase($of)]
+
+    } else {
+      $_pkg_name = undef
     }
 
   } elsif is_string($_alts) {
@@ -74,7 +77,7 @@ define package_alternatives (
     fail('$alternatives must be hash or string')
   }
 
-  if $_pkg_name and ! defined(Package[$_pkg_name]) and ! defined(Package[$pkg_alias]) {
+  if ! empty($_pkg_name) and ! defined(Package[$_pkg_name]) and ! defined(Package[$pkg_alias]) {
     ensure_resource('package', $_pkg_name, {
       'ensure' => $ensure,
       'alias'  => $pkg_alias,
