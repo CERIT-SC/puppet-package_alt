@@ -1,3 +1,9 @@
+## 2018-04-28 - Release 1.0.0
+
+- Convert to the PDK module
+- Modernize for Puppet 4/5
+- Unit tests
+
 ## 2017-06-13 - Release 0.9.5
 
 Fix warnings about Puppet Unknown variable: '_pkg_name'
