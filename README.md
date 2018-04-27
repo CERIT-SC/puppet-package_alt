@@ -8,12 +8,12 @@ names across platforms.
 
 Module has been tested on:
 
-* Puppet 3.3
+* Puppet 5.5
 * Debian and Red Hat family systems
 
 Required modules:
 
-* stdlib (https://github.com/puppetlabs/puppetlabs-stdlib)
+* [puppetlabs-stdlib](https://github.com/puppetlabs/puppetlabs-stdlib)
 
 # Quick Start
 
@@ -94,7 +94,7 @@ $software = {
 }
 ```
 
-* hash of resource names with with hash or string containing 
+* hash of resource names with with hash or string containing
   package name or platforms hash of alternatives, e.g.:
 
 
