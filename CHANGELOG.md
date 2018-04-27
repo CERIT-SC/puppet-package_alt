@@ -1,3 +1,7 @@
+## 2018-04-28 - Release 1.0.1
+
+- Fix module archive file permissions
+
 ## 2018-04-28 - Release 1.0.0
 
 - Convert to the PDK module
