@@ -1,3 +1,7 @@
+## 2018-04-28 - Release 1.0.2
+
+- Fix support for hash of hashes with alternatives
+
 ## 2018-04-28 - Release 1.0.1
 
 - Fix module archive file permissions
