@@ -95,7 +95,8 @@ describe 'package_alternatives' do
             'ensure'       => 'latest',
             'fail_missing' => true,
             'alternatives' => {
-              'man-db' => {
+              'whatever' => 'something',
+              'man-db'   => {
                 'debian'   => 'man-db',
                 'redhat-5' => 'man',
                 'redhat-6' => 'man',

@@ -37,7 +37,7 @@
 define package_alternatives (
   Enum['present', 'installed', 'latest', 'absent', 'purged'] $ensure,
   Boolean $fail_missing      = true,
-  Variant[String[1], Hash[String[1], String[1]], Hash[String[1], Hash[String[1], String[1]]]] $alternatives = $title,
+  Variant[String[1], Hash[String[1], Variant[String[1], Hash[String[1], String[1]]]]] $alternatives = $title,
   String[1] $pkg_alias       = $title,
   Optional[String] $platform = undef,
 ) {
