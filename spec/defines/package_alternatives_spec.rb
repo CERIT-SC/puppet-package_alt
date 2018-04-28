@@ -87,6 +87,49 @@ describe 'package_alternatives' do
         }
       end
 
+      context 'with hash of hash of alternatives' do
+        let(:title) { 'man-db' }
+
+        let(:params) do
+          {
+            'ensure'       => 'latest',
+            'fail_missing' => true,
+            'alternatives' => {
+              'man-db' => {
+                'debian'   => 'man-db',
+                'redhat-5' => 'man',
+                'redhat-6' => 'man',
+                'redhat'   => 'man-db',
+                'sles'     => 'man',
+                'sled'     => 'man',
+              },
+            },
+          }
+        end
+
+        it { is_expected.to compile }
+
+        it {
+          package = case os_facts[:os]['name']
+                    when 'Debian', 'Ubuntu'
+                      'man-db'
+                    when 'RedHat', 'CentOS', 'Scientific', 'OracleLinux', 'Fedora'
+                      if os_facts[:os]['release']['major'] =~ %r{^[56]$}
+                        'man'
+                      else
+                        'man-db'
+                      end
+                    when 'SLES', 'SLED'
+                      'man'
+                    end
+
+          is_expected.to contain_package(package).with(
+            'ensure' => 'latest',
+            'alias'  => 'man-db',
+          )
+        }
+      end
+
       context 'with platform override' do
         let(:title) { 'foo' }
 
