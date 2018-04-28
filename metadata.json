@@ -1,6 +1,6 @@
 {
   "name": "ceritsc-package_alternatives",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "ceritsc",
   "summary": "Package wrapper for easy work with different package names across platforms",
   "license": "MIT",
